@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
+import { Link } from "react-router-dom";
 
 function PokemonList() {
   const [pokemonData, setpokemonData] = useState([]);
@@ -29,7 +30,7 @@ function PokemonList() {
     <>
       <div className="grid grid-cols-5 gap-2 p-4">
         {pokemonData.map((pokemon) => (
-          <Card key={pokemon.id} props={pokemon} />
+          <Link to={`/pokemondetail/${pokemon.id}`}><Card key={pokemon.id} props={pokemon} /></Link>
         ))}
       </div>
     </>

@@ -5,15 +5,21 @@ function Card({ props }) {
 
   return (
     <>
-      <div className="m-3 bg-slate-400 w-auto " key={props.id}>
-        <h1>{props.id}</h1>
+    <div className="m-3 h-72 bg-slate-400 w-auto flex flex-col items-center" key={props.id}>
+    <div className="flex justify-center items-center w-full h-48">
         <img
-          className="w-auto h-auto"
-          src={`${urlImage}${props.id}.gif`}
-          alt="not found"
+            // className="w-auto"
+            src={`${urlImage}${props.id}.gif`}
+            alt="not found"
         />
-        <h1>{props.name}</h1>
-      </div>
+    </div>
+    <div className="bg-blue-400 w-full p-2">
+          <h1 style={{ fontFamily: 'Arial', fontSize: '20px', fontWeight: 'bold' }}>{props.id}</h1>
+          <h1 style={{ fontFamily: 'Arial', fontSize: '18px', fontWeight: 'normal' }}>{props.name}</h1>
+        </div>
+    
+</div>
+
     </>
   );
 }
